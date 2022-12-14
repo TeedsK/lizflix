@@ -1,0 +1,70 @@
+/* This is the general background */
+.banner-background {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    z-index: 10;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* This represents the title in the header banner */
+.header-title {
+    margin-left: 20px;
+    height: 100%;
+    /* background-color: purple; */
+    text-align:center;
+    display:table;
+    float: left;
+}
+
+.header-title h1 {
+    margin:0;
+    padding:0;
+    vertical-align:middle;
+    display:table-cell;
+    color: white;
+    user-select: none;
+}
+
+
+/* */
+.categories {
+    float: left;
+}
+
+.category-titles {
+    text-align: justify;
+    color: white;
+    cursor: pointer;
+    line-height: 55px;
+    margin-top: 0;
+}
+
+.category-titles:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.category-titles:before {
+    content: '';
+    display: block;
+}
+
+.category-titles li {
+    display: inline-block;
+    margin-right: -.25em;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 50px;
+}
+
+/* This represents the profile button on the banner */
+.profile {
+    float: right;
+    width: 100px;
+    height: 100%;
+    margin-right: 0px;
+}
