@@ -48,11 +48,11 @@ export class Banner extends React.Component {
                     <h1 style={{color: "rgb(229, 9, 20)"}}><span style={{color: "rgb(229, 9, 20)"}}>Liz</span>Flix</h1>
                 </div>
                 <div className="categories">
-                    <ul className="rubikf category-titles">
-                        <li>Home</li>
-                        <li>Something</li>
-                        <li>Square</li>
-                    </ul>
+                    <div className="rubikf category-titles">
+                        <p>Home</p>
+                        <p>Stop-Motions</p>
+                        <p>Explore</p>
+                    </div>
                 </div>
                 <div className="profile">
 

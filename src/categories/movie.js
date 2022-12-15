@@ -31,7 +31,7 @@ export class Movie extends React.Component {
 
     render() {
         return(
-            <div className="thumbnail-wrapper" onClick={() => this.props.clickHandler(this.props.title, this.props.description, this.props.id)}>
+            <div className="thumbnail-wrapper" onClick={() => this.props.clickHandler(this.props.title, this.props.description, this.props.id, this.props.director)}>
                 {this.getThumbnail(this.props.id)}
             </div>
         );

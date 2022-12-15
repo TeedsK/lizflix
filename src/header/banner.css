@@ -20,8 +20,6 @@
 }
 
 .header-title h1 {
-    margin:0;
-    padding:0;
     vertical-align:middle;
     display:table-cell;
     color: white;
@@ -37,29 +35,24 @@
 .category-titles {
     text-align: justify;
     color: white;
+    display:table-row;
+    
+}
+
+.category-titles p {
+    color: rgb(225,225,225);
+    float: left;
+    margin-top: 20px;
+    margin-left: 50px;
     cursor: pointer;
-    line-height: 55px;
-    margin-top: 0;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
 }
 
-.category-titles:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+.category-titles p:hover {
+    color: rgb(250,250,250);
 }
 
-.category-titles:before {
-    content: '';
-    display: block;
-}
-
-.category-titles li {
-    display: inline-block;
-    margin-right: -.25em;
-    position: relative;
-    padding-left: 10px;
-    padding-right: 50px;
-}
 
 /* This represents the profile button on the banner */
 .profile {

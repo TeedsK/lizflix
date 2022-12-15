@@ -17,7 +17,8 @@ class RelationFlix extends React.Component {
         this.state = {
             title: null,
             description: null,
-            link: null
+            link: null,
+            director: null
         }
     }
 
@@ -25,15 +26,17 @@ class RelationFlix extends React.Component {
         this.setState({
             title: null,
             description: null,
-            link: null
+            link: null,
+            director: null
         });
     }
 
-    handleClicked = (title, description, link) => {
+    handleClicked = (title, description, link, director) => {
         this.setState({
             title: title,
             description: description,
-            link: link
+            link: link,
+            director: director
         });
     }
 
@@ -42,6 +45,7 @@ class RelationFlix extends React.Component {
         const title = this.state.title;
         const description = this.state.description;
         const link = this.state.link;
+        const director = this.state.director;
 
         console.log(title + ", " + description + ", " + link)
 
@@ -51,6 +55,7 @@ class RelationFlix extends React.Component {
                 title={title}
                 description={description}
                 link={link}
+                director={director}
                 callback={this.removeOverlay}
             />
 

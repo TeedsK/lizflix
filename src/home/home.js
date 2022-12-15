@@ -23,8 +23,10 @@ export class Home extends React.Component {
     render() {
         return (
             <div className="home-background">
-                <FeaturedFilm className="featured-wrapper">
-                </FeaturedFilm>
+                <FeaturedFilm 
+                    className="featured-wrapper" 
+                    clickHandler={this.props.clickHandler}
+                />
                 <div className="featuredTransition"></div>
                 <div className="categories-wrapper">
 
@@ -33,7 +35,7 @@ export class Home extends React.Component {
                         description="oh wow these are great"
                         movies={
                             [
-                                ["g1Bhhkm3xLM", "Korea Trip"]
+                                ["g1Bhhkm3xLM", "a Beautiful Korea Trip", "A wonderful place with a beautiful woman, follow along as Theo, Liz, Stanley, and Maddie make a quick but exciting and adventerous trip to Seoul, South Korea", "Theo + Liz"]
                             ]
                         } />
                     <Category clickHandler={this.props.clickHandler}
@@ -41,14 +43,14 @@ export class Home extends React.Component {
                         description="films with each frame individual taken to create a full length film"
                         movies={
                             [
-                                ["lbNMRrSJE8w", "Lego Ghostbusters Trailer Parody"],
-                                ["myzXCcsyqPA", "Lego Zombie Trailer"],
-                                ["S43fO8xPOdg", "Stop Motion in Real Life"],
-                                ["R39DzcgGcAI", "Lego Time Machine"],
-                                ["Sh9yIweBaRM", "Lego Arcade"],
-                                ["2X05pXsPgKE", "Lego Missing the Bus"],
-                                ["MLwQKeWqh3w", "Lego Zombies"],
-                                ["kL0yIGepPMQ", "Lego Dog Walk"]
+                                ["myzXCcsyqPA", "Lego Zombie Trailer", "Lost in the zombie apacolypse with no hope, one man finds a stranger changing everything he knows, the trailer for a much larger film: Lego Zombies", "Theo Kremer"],
+                                ["S43fO8xPOdg", "Stop Motion in Real Life", "life taken in pictures of a waking boy who is starting off his day. Through the use of stop-motion animation, watch the movie showcases the boundless potential of the human imagination", "Theo Kremer"],
+                                ["R39DzcgGcAI", "Lego Time Machine", "One man finds a makeshift old time machine in an abandoned warehouse, follow along as time itself gets manipulated and change, how will it end??", "Theo Kremer"],
+                                ["Sh9yIweBaRM", "Lego Arcade", "Heaven? Best Place on Earth? Wonderland? all three of these words perfectly describe the Arcade, the best place on Earth, or the most frustrating? Watch as one child ventures and finds out", "Theo Kremer"],
+                                ["2X05pXsPgKE", "Lego Missing the Bus", "A student Lego figure misses his ride to school, with no other option, he must find his own way to make it to class before it's too late, but what will he do??", "Theo Kremer"],
+                                ["MLwQKeWqh3w", "Lego Zombies", "A young teen, lost in the woods, stuck in his car, with absolutely no hope he is about to end it all. How will things unfold as a horde of zombies begin banging on his car doors?", "Theo Kremer"],
+                                ["kL0yIGepPMQ", "Lego Dog Walk", "Walking your dog should be a straightforward and easy thing to do. Not for this man though, watch as he is stuck in what seems to be an endless cycle of disasterous events to occur with one man and his dog.", "Theo Kremer"],
+                                ["lbNMRrSJE8w", "Lego Ghostbusters Trailer Parody", "A short trailer for a upcoming large oscar winning film: Lego Ghostbusters!", "Theo Kremer"],
                             ]
                         } />
                     <Category clickHandler={this.props.clickHandler}

@@ -51,14 +51,6 @@ function Title(props) {
     );
 }
 
-function FeaturedButtons(props) {
-    return (
-        <div style={{color: props.foreground}} id={props.id}  className="rubikf featured-button">
-            <p>{props.text}</p>
-        </div>
-    )
-}
-
 export class FeaturedFilm extends React.Component {
 
     constructor(props) {
@@ -67,7 +59,9 @@ export class FeaturedFilm extends React.Component {
             title: "Hi, Elizabeth Love, Theodore",
             fonts: ["writing", "writing"],
             lineCut: [2],
-            description: "One man writes a letter confessing his love for a beautiful young woman. Follow the stop-motion creativity of Theodore Kremer. "
+            description: "One man writes a letter confessing his love for a beautiful young woman. Follow the stop-motion creativity of Theodore Kremer. ",
+            id: "MLwQKeWqh3w",
+            director: "Theo Kremer"
         }
     }
 
@@ -106,7 +100,8 @@ export class FeaturedFilm extends React.Component {
 
         const title = this.state.title;
         const lineCut = this.state.lineCut;
-        const description = this.state.description;
+        const description = this.state.description; 
+        const director = this.state.director;
         const fonts = this.state.fonts;
         const children = []
 
@@ -126,8 +121,12 @@ export class FeaturedFilm extends React.Component {
                     {children}
                     {this.getDescription(description)}
                     <div className="featured-button-wrapper">
-                        <FeaturedButtons id="watch" foreground="black" text="watch"/>
-                        <FeaturedButtons id="info" foreground="white" text="info"/>
+                        <div style={{color: 'black'}} id="watch" className="rubikf featured-button">
+                            <p>watch</p>
+                        </div>
+                        <div id="info" onClick={() => this.props.clickHandler(this.state.title, this.state.description, this.state.id, this.state.director)} style={{color: 'white'}} className="rubikf featured-button">
+                            <p>info</p>
+                        </div>
                     </div>
                 </div>
                 <div className="featured-wrapper">
@@ -136,7 +135,7 @@ export class FeaturedFilm extends React.Component {
                         width="100%"
                         height="100%"
                         frameBorder="0"
-                        src={YoutubeLink("MLwQKeWqh3w")}
+                        src={YoutubeLink(this.state.id)}
                         allow="autoplay; encrypted-media"
                         >
                     </iframe>

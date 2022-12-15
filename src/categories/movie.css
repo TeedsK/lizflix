@@ -2,13 +2,14 @@
     float: left;
     width: 311px;
     height: 175px;
+    margin-top: 5px;
     margin-right: 10px;
+    margin-left: 10px;
     border-radius: 7px;
     flex: 0 0 auto;
     max-width: 100%;
-    margin-right: 10px;
     background: transparent;
-    /* transition: all 1s ease-in-out; */
+    transition: all 0.5s ease-in-out;
 }
 
 .movie-thumbnail {
@@ -17,4 +18,12 @@
     object-fit: cover;
     border-radius: 7px;
     cursor: pointer;
+}
+
+.thumbnail-wrapper:hover {
+    margin-top: 0px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 329px;
+    height: 185px;
 }

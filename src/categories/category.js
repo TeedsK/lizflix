@@ -75,6 +75,8 @@ export class Category extends React.Component {
                 <Movie className="movie" clickHandler={click}
                     id={movie[0]}
                     title={movie[1]}
+                    description={movie[2]}
+                    director={movie[3]}
                     key={i}
                     
                 />

@@ -19,7 +19,7 @@
 }
 
 .upper-description .title {
-    margin-right: 20px;
+    margin-right: 10px;
     font-size: 20px;
     color: rgb(255,255,255);
 }
@@ -28,19 +28,21 @@
     float:left;
     display: table-cell;
     vertical-align: middle;
-    line-height: 8px;
+    margin-top: 22px;
+    margin-left: 5px;
+    /* background-color: antiquewhite; */
+    /* line-height: 16px; */
 }
 
 .movies-container {
     position: static;
-    /* background-color: mediumslateblue; */
 }
 
 .scroller {
     display: flex;
     flex-wrap: no-wrap;
     overflow-x: auto;
-    height: 200px;
+    height: 205px;
     transition: all 1s ease-in-out;
 }
 
@@ -57,7 +59,7 @@
     z-index: 2;
     position: absolute;
     width: 30%;
-    height: 175px;
+    height: 180px;
     pointer-events : none;
 }
 
