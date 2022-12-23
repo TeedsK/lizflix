@@ -22,7 +22,6 @@ export class Info extends React.Component {
     }
 
     youtubeDescription = async (videoId, description) => {
-        console.log('id: ' + videoId + " | " + description);
 
         if (description != null) {
             this.setState({
@@ -66,6 +65,9 @@ export class Info extends React.Component {
                         </div>
                         <p className="rubikf description">{this.state.description}</p>
                         <p className="rubikf director">{this.state.director}</p>
+                        <div id="watch" className="rubikf featured-button info-watch">
+                            <p>watch</p>
+                        </div>
                     </div>
                     <div className="right-movie">
                         <div className="film-wrapper">

@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { FeaturedFilm } from './featuredFilm';
 import { Category } from '../categories/category'
+import { Polaroids } from '../flics/polaroids'
 import './home.css';
 import '../fonts.css';
 
-
+function getThizImage() {
+    return '../images/thiz' + Math.round(Math.random() * 10) + '.JPG';
+}
 /**
  * This class represents the home page 
  * 
@@ -56,6 +59,11 @@ export class Home extends React.Component {
                     <Category clickHandler={this.props.clickHandler}
                         title="Watch Again"
                         description="movies that are worth watching for another time"
+                        image="/images/highlights/"
+                        imageWidth = {30}
+                        imageHeight= {440}
+                        right = {true}
+                        max={17}
                         movies={
                             [
                                 ["9KzbALXlDwQ", "Project X"],
@@ -70,6 +78,8 @@ export class Home extends React.Component {
                     <Category clickHandler={this.props.clickHandler}
                         title="Long Distance"
                         description="movies perfect for watching when miles away from one another "
+                        imageWidth = {30}
+                        right= {true}
                         movies={
                             [
                                 ["Q1z8OVfAUCI", "Percy Jackson & the Lightning Thief"],
@@ -88,9 +98,45 @@ export class Home extends React.Component {
                         movies={
                             [
                                 ["MqRqfjIjUxc", "Pride & Prejudice"],
-                                ["9odI5vkYXqA", "Barbie: Princess Charm School"]
+                                ["9odI5vkYXqA", "Barbie: Princess Charm School"],
+                                ["-HjOEfPURCg", "Whiplash"],
                             ]
                         } />
+
+                    <Polaroids 
+                        dir = "/images/photobooth/"
+                        count = "14">
+                    </Polaroids>
+
+                    <Category clickHandler={this.props.clickHandler}
+                        title="Horror"
+                        description="scary movies we might never want to watch again"
+                        image="/images/polaroids/option1/"
+                        imageWidth = {30}
+                        imageHeight= {440}
+                        right={false}
+                        max={8}
+                        movies={
+                            [
+                                ["YPGkXSsz3-w", "X"],
+                                ["ph5Lw0JDmyA", "Gonjiam"],
+                                ["-ZjUo4iLsEM", "Smile"],
+                                ["qfSTiAw1rkM", "Eli"],
+                                ["2Umlo9hHKnA", "Terrifier"],
+                            ]
+                        } />
+
+                        <Category clickHandler={this.props.clickHandler}
+                        imageWidth = {30}
+                        right={false}
+                        movies={
+                            [
+                                ["IN5TD4VRcSM", "All of Us are Dead"],
+                                ["H-ez5on5wHU", "Blaire Witch Project"]
+                            ]
+                        } />
+
+                    
 
                     <footer>
                         <div className="container footerContainer">
@@ -158,6 +204,8 @@ export class Home extends React.Component {
                             <div className="copyright rubikf">© 2022 – All Rights Reserved. (Not real)</div>
                         </div>
                     </footer>
+
+                    
                 </div>
 
             </div>

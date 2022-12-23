@@ -1,6 +1,7 @@
 
 .category-container {
     margin: 10px;
+    position: relative;
 }
 
 .upper-description {
@@ -35,7 +36,7 @@
 }
 
 .movies-container {
-    position: static;
+    position: relative;
 }
 
 .scroller {
@@ -44,6 +45,8 @@
     overflow-x: auto;
     height: 205px;
     transition: all 1s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .scroller::-webkit-scrollbar {
@@ -55,19 +58,40 @@
     clear: both;
 }
 
-.slideshow_gradient {
+.slideshow-gradient {
     z-index: 2;
     position: absolute;
     width: 30%;
-    height: 180px;
+    height: 185px;
     pointer-events : none;
 }
 
 #leftGradient {
-    background-image: linear-gradient(to right, rgb(20, 20, 20, 1) 1%, rgba(20,20,20,0));
+    background-image: linear-gradient(to right, rgb(20, 20, 20, 1), rgba(20,20,20,0));
 }
 
 #rightGradient {
     right: 0px;
-    background-image: linear-gradient(to left, rgb(20, 20, 20, 1) 1%, rgba(20,20,20,0));
+    background-image: linear-gradient(to left, rgb(20, 20, 20, 1), rgba(20,20,20,0));
+}
+
+.image-container {
+    z-index: 9;
+    width: 30%;
+    margin-top: -200px;
+    border-radius: 10px;
+}
+
+.image-container img {
+    border-radius: 10px;
+    object-fit: cover;
+    /* margin-left: 30px; */
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+}
+
+.image-container .gradient {
+    background: radial-gradient(rgba(0,0,0, 0.1), rgb(20,20,20));
+    z-index: 10;
+    position: absolute;
 }

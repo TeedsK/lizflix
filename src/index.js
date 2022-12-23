@@ -47,8 +47,6 @@ class RelationFlix extends React.Component {
         const link = this.state.link;
         const director = this.state.director;
 
-        console.log(title + ", " + description + ", " + link)
-
         if (this.state.title != null) {
 
             const info = <Info
