@@ -26,8 +26,8 @@ export class Home extends React.Component {
     render() {
         return (
             <div className="home-background">
-                <FeaturedFilm 
-                    className="featured-wrapper" 
+                <FeaturedFilm
+                    className="featured-wrapper"
                     clickHandler={this.props.clickHandler}
                 />
                 <div className="featuredTransition"></div>
@@ -41,7 +41,7 @@ export class Home extends React.Component {
                                 ["g1Bhhkm3xLM", "a Beautiful Korea Trip", "A wonderful place with a beautiful woman, follow along as Theo, Liz, Stanley, and Maddie make a quick but exciting and adventerous trip to Seoul, South Korea", "Theo + Liz"]
                             ]
                         } />
-                    <Category clickHandler={this.props.clickHandler}
+                    <Category id="stop-motions" clickHandler={this.props.clickHandler}
                         title="Stop Motion Animations"
                         description="films with each frame individual taken to create a full length film"
                         movies={
@@ -60,9 +60,9 @@ export class Home extends React.Component {
                         title="Watch Again"
                         description="movies that are worth watching for another time"
                         image="/images/highlights/"
-                        imageWidth = {30}
-                        imageHeight= {440}
-                        right = {true}
+                        imageWidth={30}
+                        imageHeight={440}
+                        right={true}
                         max={17}
                         movies={
                             [
@@ -78,8 +78,8 @@ export class Home extends React.Component {
                     <Category clickHandler={this.props.clickHandler}
                         title="Long Distance"
                         description="movies perfect for watching when miles away from one another "
-                        imageWidth = {30}
-                        right= {true}
+                        imageWidth={30}
+                        right={true}
                         movies={
                             [
                                 ["Q1z8OVfAUCI", "Percy Jackson & the Lightning Thief"],
@@ -88,6 +88,7 @@ export class Home extends React.Component {
                                 ["po5B_elq7p8", "Bachelorette Chad"],
                                 ["qRsb3UuvpTc", "Bullet Train"],
                                 ["hxaaAoI57fk", "Holidate"],
+                                ["abY1UfGBpqQ", "Call me by your Name"],
                                 ["7ZtRnIwv_FY", "You"],
                                 ["7rI56NmD33Y", "Sweet Home"]
                             ]
@@ -100,20 +101,21 @@ export class Home extends React.Component {
                                 ["MqRqfjIjUxc", "Pride & Prejudice"],
                                 ["9odI5vkYXqA", "Barbie: Princess Charm School"],
                                 ["-HjOEfPURCg", "Whiplash"],
+                                ["JXqgN-a1N7g", "Pearl"]
                             ]
                         } />
 
-                    <Polaroids 
-                        dir = "/images/photobooth/"
-                        count = "14">
+                    <Polaroids
+                        dir="/images/photobooth/"
+                        count="14">
                     </Polaroids>
 
                     <Category clickHandler={this.props.clickHandler}
                         title="Horror"
                         description="scary movies we might never want to watch again"
                         image="/images/polaroids/option1/"
-                        imageWidth = {30}
-                        imageHeight= {440}
+                        imageWidth={30}
+                        imageHeight={440}
                         right={false}
                         max={8}
                         movies={
@@ -126,17 +128,63 @@ export class Home extends React.Component {
                             ]
                         } />
 
-                        <Category clickHandler={this.props.clickHandler}
-                        imageWidth = {30}
+                    <Category clickHandler={this.props.clickHandler}
+                        imageWidth={30}
                         right={false}
                         movies={
                             [
                                 ["IN5TD4VRcSM", "All of Us are Dead"],
-                                ["H-ez5on5wHU", "Blaire Witch Project"]
+                                ["H-ez5on5wHU", "Blaire Witch Project"],
+                                ["NVHHs-xllqo", "Dahmer"]
                             ]
                         } />
 
-                    
+                    <Category id="tmations" clickHandler={this.props.clickHandler}
+                        title="Tmations"
+                        description="videos taken straight from the Tmations youtube channel"
+                        movies={
+                            [
+                                ["1jNuVkH4xjU", "How to be a Director", "A step by step tutorial on how to be a professional level director taught by the infamous Theodore Thanksgiving Kremer", "Theo Kremer"],
+                                ["Wc85wTQ1cJo", "Rainbow Six Siege"],
+                                ["_aiZ9AJoHuI", "Fortnite"],
+                                ["IxGQmpDdiso", "Rainbow Six Siege"],
+                            ]
+                        }
+                    />
+
+                    <Category clickHandler={this.props.clickHandler}
+                        title="Tmations Premium"
+                        image="/images/polaroids/option2/"
+                        imageWidth={30}
+                        imageHeight={440}
+                        right={true}
+                        max={5}
+                        description="the most premium videos Tmations offers"
+                        movies={
+
+                            [
+                                ["mk4ySBcqwlI", "Fortnite", "This video was my most popular, raking in 75,000 views! That is insane!", "not Theo Kremer"],
+                                ["pODAAFdk8sE", "Fortnite", "This video was my second most popular with 3,000 views! Woah, thats somewhat mindblowing!", "not theodore"],
+                                ["FOYOCoALLI0", "LEGO Player Unknown Battlegrounds", "i don't even wanna talk about this one..."]
+                            ]
+                        }
+                    />
+
+                    <div className="fade ending">
+                        <a className="rubikSBF">Thank you</a>
+                        <p className="rubikf">Hi Liz, Merry Christmas<br/>
+                            <br/>
+                            I've been working on this website for you since early November<br/>
+                           I made it to give homeage to us spending our time watching movies through Netflix while 600 miles apart<br/>
+                           Although it took some time, you're a person who is worth the effort to see smile<br/>
+                           I look foward to our many winter wonderland Christmas seasons we'll share in the future<br/>
+                           <br/>
+                           I love you forever my beautiful angel,<br/>
+                           Theo</p>
+                    </div>
+
+
+
 
                     <footer>
                         <div className="container footerContainer">
@@ -146,7 +194,7 @@ export class Home extends React.Component {
                                         <p>LizFlix</p>
                                     </span>
                                     <p className="rubikf site-decription">
-                                        1007 Batcave Ave, <br/>Gotham, New York <br/>(510) BAT - CAVE
+                                        1007 Batcave Ave, <br />Gotham, New York <br />(510) BAT - CAVE
                                     </p>
                                     <div className="social-medias flex flex-g-1">
                                         <a href="#" className="social-media flex">
@@ -205,7 +253,7 @@ export class Home extends React.Component {
                         </div>
                     </footer>
 
-                    
+
                 </div>
 
             </div>

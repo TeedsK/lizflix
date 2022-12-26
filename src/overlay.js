@@ -66,7 +66,7 @@ export class Info extends React.Component {
                         <p className="rubikf description">{this.state.description}</p>
                         <p className="rubikf director">{this.state.director}</p>
                         <div id="watch" className="rubikf featured-button info-watch">
-                            <p>watch</p>
+                            <p onClick={(e) => {window.open("https://www.youtube.com/watch?v=" + this.props.link)}} >watch</p>
                         </div>
                     </div>
                     <div className="right-movie">

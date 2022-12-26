@@ -78,7 +78,7 @@ export class Polaroids extends React.Component {
                         transition: 'transform ease-out 0.8s'
                     }}>
                     {this.state.images.map((image) => (
-                        <img className="carousel-item" src={image} key={image} />
+                        <img key={image} className="carousel-item" src={image} />
                     ))}
                 </div>
             </div>

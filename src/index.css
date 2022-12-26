@@ -14,5 +14,26 @@ body::-webkit-scrollbar {
     margin-top: -20px;
 }
 
+.videoContainer {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.videoContainer__video {
+    /* optional */
+    width: 100%;
+    height: 100%; 
+}
+
 
 @import url(https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap);

@@ -25,8 +25,8 @@ export class Category extends React.Component {
         this.state = {
             title: props.title,
             description: props.description,
-            img1: this.props.image + "thiz" + Math.floor(Math.random() * this.props.max) + ".JPG",
-            img2: this.props.image + "thiz" + Math.floor(Math.random() * this.props.max) + ".JPG",
+            img1: this.props.image + "thiz" + Math.floor(Math.random() * (this.props.max + 1)) + ".JPG",
+            img2: this.props.image + "thiz" + Math.floor(Math.random() * (this.props.max + 1)) + ".JPG",
             opacityRight: 1,
             opacityLeft: 0,
             imgOpacity: true
@@ -39,7 +39,7 @@ export class Category extends React.Component {
         this.interval = setInterval(async () => {
 
             const is1 = this.state.imgOpacity
-            const random = this.props.image + "thiz" + Math.floor(Math.random() * this.props.max) + ".JPG";
+            const random = this.props.image + "thiz" + Math.floor(Math.random() * (this.props.max + 1)) + ".JPG";
 
             if(is1) {
                 this.setState({

@@ -2,7 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './banner.css';
 import '../fonts.css';
+import '../home/home.js'
+import '../home/featuredFilm.js'
+import '../categories/category.js'
 
+function scrollToItem(id) {
+    // location.href = id;
+    // document.getElementById().scrollIntoView()
+}
 
 export class Banner extends React.Component {
 
@@ -49,9 +56,9 @@ export class Banner extends React.Component {
                 </div>
                 <div className="categories">
                     <div className="rubikf category-titles">
-                        <p>Home</p>
-                        <p>Stop-Motions</p>
-                        <p>Explore</p>
+                        <p onClick={scrollToItem("featured-film")}>Home</p>
+                        <p onClick={scrollToItem("stop-motions")}>Stop-Motions</p>
+                        <p onClick={scrollToItem("tmations")}>Tmations</p>
                     </div>
                 </div>
                 <div className="profile">

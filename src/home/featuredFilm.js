@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './featured.css';
 import '../fonts.css';
 
-export function YoutubeLink(link) {
+export function YoutubeLink(link, mute) {
 
     let result = "";
     let code;
@@ -18,15 +18,19 @@ export function YoutubeLink(link) {
     let options = [
         "showinfo=0",
         "autoplay=1",
-        "mute=1",
         "loop=1",
         "rel=0",
         "modestbranding=0",
         "controls=0",
         "showsearch=0",
         "&iv_load_policy=3",
-        "disablekb=1"
+        "disablekb=1",
+        "playlist="+link
     ]
+
+    if(mute) {
+        options.push("mute=1");
+    }
 
     if(code != null)
         options.push("playlist=" + code);
@@ -116,12 +120,12 @@ export class FeaturedFilm extends React.Component {
         })
 
         return (
-            <div>
+            <div id="featured-film">
                 <div className="title-container">
                     {children}
                     {this.getDescription(description)}
                     <div className="featured-button-wrapper">
-                        <div style={{color: 'black'}} id="watch" className="rubikf featured-button">
+                        <div onClick={(e) => {window.open("https://www.youtube.com/watch?v=" + this.state.id)}} style={{color: 'black'}} id="watch" className="rubikf featured-button">
                             <p>watch</p>
                         </div>
                         <div id="info" onClick={() => this.props.clickHandler(this.state.title, this.state.description, this.state.id, this.state.director)} style={{color: 'white'}} className="rubikf featured-button">
@@ -135,7 +139,7 @@ export class FeaturedFilm extends React.Component {
                         width="100%"
                         height="100%"
                         frameBorder="0"
-                        src={YoutubeLink(this.state.id)}
+                        src={YoutubeLink(this.state.id, true)}
                         allow="autoplay; encrypted-media"
                         >
                     </iframe>
